@@ -42,8 +42,8 @@ La estrategia incluirá:
 
 ## Casos de prueba
 Los casos de prueba que se  realizaron estan en estos archivos:
-- [Free Plan](main/src/test/resources/features/testingPlans_Free.feature)
-- [Monthly Plan](main/src/test/resources/features/testingPlans_Monthly.feature)
+- [Free Plan](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/src/test/resources/features/testingPlans_Free.feature)
+- [Monthly Plan](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/src/test/resources/features/testingPlans_Monthly.feature)
 
 ## Supuestos
 
