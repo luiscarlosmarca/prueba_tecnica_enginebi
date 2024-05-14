@@ -35,25 +35,27 @@ cd prueba_tecnica_enginebi
 Ejecuta el siguiente comando para compilar y descargar las dependencias:
 
 ```
-mvn clean compile
+gradle build
 ```
 
 ## Ejecución
 Para ejecutar las pruebas automatizadas, utiliza el siguiente comando:
 
 ```
-gradle build
-gradle :test   --tests "com.co.enginebi.runners.Test_Plan_Free_Runner"  --aggregate
-gradle aggregate
+gradle :test  --tests "com.co.enginebi.runners.Test_Plan_Free_Runner" 
 ```
 
 Estos comandos descargara las dependencias, ejecutará las pruebas y generará los informes de Serenity.
 
+```
+gradle aggregate
+```
 ## Estructura del proyecto
 
 - src/main/java: Contiene los archivos de código fuente de las pruebas.
-  - task:
-  - ui:
+  - task: acciones de alto nivel que pueden ser realizadas por un actor (Actor) en el escenario de prueba. Las tareas encapsulan las interacciones que un usuario realiza con la interfaz de usuario para completar una funcionalidad o flujo de trabajo específico.
+  - Question: Una consulta o una verificación sobre el estado de la interfaz de usuario o del sistema después de realizar una acción
+   - ui: Elementos de la interfaz de usuario con los que interactúa un actor durante la ejecución de una tarea o pregunta
 - src/test/ : Contiene los archivos de recursos, como los archivos Gherkin con los escenarios de prueba.
   - Java/Runner: Archivos que ejecuta los escenarios de prueba
   - Java/Stepdefinitions: En donde se establecen los metodos utilizados en los casos de prueba. 
