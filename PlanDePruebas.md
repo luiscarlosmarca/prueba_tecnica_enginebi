@@ -44,6 +44,8 @@ La estrategia incluirá:
 Los casos de prueba que se  realizaron estan en estos archivos:
 - [Free Plan](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/src/test/resources/features/testingPlans_Free.feature)
 - [Monthly Plan](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/src/test/resources/features/testingPlans_Monthly.feature)
+- [Annual Plan](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/src/test/resources/features/testingPlans_Annual.feature)
+- [Platinum Plan](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/src/test/resources/features/testingPlans_Platinum.feature)
 
 ## Supuestos
 
