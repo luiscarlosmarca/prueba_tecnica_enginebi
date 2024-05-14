@@ -6,7 +6,7 @@
 Este proyecto utiliza Selenium, Cucumber y el patrón de diseño Screenplay para realizar pruebas automatizadas en aplicaciones web.
 Se utiliza Gradle como gestor de dependencias.
 
-## [Ver Plan de pruebas] (https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/PlanDePruebas.md)
+## [Ver Plan de pruebas](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi/blob/main/PlanDePruebas.md)
 ## [Ver informe de ejecución](target/site/serenity/index.html)
 
 ## [Ver repositorio](https://github.com/luiscarlosmarca/prueba_tecnica_enginebi)
