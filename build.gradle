@@ -1,0 +1,75 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+
+buildscript {
+    ext{
+        serenityCoreVersion = "2.0.11"
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:$serenityCoreVersion")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+
+ext{
+    serenityCoreVersion = "2.0.55"
+    serenityCucumberVersion = "3.1.20"
+
+}
+
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
+    testImplementation 'junit:junit:4.12'
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.8.0")
+
+}
+test {
+    systemProperty "cucumber.filter.tags", System.getProperty('cucumber.filter.tags')
+}
+
+
+task regression(type: Test) {
+    testLogging.showStandardStreams = true
+    maxParallelForks = 4
+    systemProperties System.getProperties()
+    systemProperty("tags", "regression")
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+
+
+regression.finalizedBy(aggregate)
+
