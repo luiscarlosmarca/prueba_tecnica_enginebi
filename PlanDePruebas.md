@@ -41,7 +41,9 @@ La estrategia incluirá:
 
 
 ## Casos de prueba
-Se realizaron en este [archivo](resources/features/testingPlans.feature)
+Los casos de prueba que se  realizaron estan en estos archivos:
+- [Free Plan](main/src/test/resources/features/testingPlans_Free.feature)
+- [Monthly Plan](main/src/test/resources/features/testingPlans_Monthly.feature)
 
 ## Supuestos
 
